@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import LogoBlack from "../assets/UpgradifyLogoBlack.png";
+import LogoWhite from "../assets/UpgradifyLogoWhite.png";
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -28,8 +30,9 @@ const Landing = () => {
       <header className="bg-blue-900 text-white">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <h1 className="text-xl font-bold">Upgradify</h1>
+            <div className="flex items-center space-x-1">
+              <img src={LogoWhite} alt="Upgradify Logo" className="h-10 w-10" />
+              <h1 className="text-xl font-bold pb-1">Upgradify</h1>
             </div>
             <button
               onClick={() => navigate("/onboarding")}
@@ -74,6 +77,11 @@ const Landing = () => {
                 Dashboard Preview
               </h3>
               <div className="bg-gray-100 rounded-lg p-12 text-center">
+                <img
+                  src={LogoBlack}
+                  alt="Upgradify Logo"
+                  className="mx-auto mb-4 w-64 h-64 object-contain"
+                />
                 <p className="text-gray-500 text-lg">
                   Interactive Dashboard Coming Soon
                 </p>
